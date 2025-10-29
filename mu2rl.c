@@ -1,11 +1,11 @@
 #include "mu2rl.h"
 
-static int text_width(mu_Font font, const char *text, int len) {
-    if (len == -1) { len = strlen(text); }
+int murl_text_width(mu_Font font, const char *text, int len) {
+    if (len == -1) { len = 0; }
     return MeasureText(text, 20);
 }
   
-static int text_height(mu_Font font) {
+int murl_text_height(mu_Font font) {
     return 20;
 }
 

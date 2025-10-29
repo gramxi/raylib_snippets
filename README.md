@@ -63,7 +63,7 @@ tg_draw(camera, pos_ptr, &arrow);
 A simple port of the MicroUI Library (https://github.com/rxi/microui/) to be used in raylib. 
 
 Use it by including the microui (.c/.h) files into your project (and of course the mu2rl files too :). 
-Initialize the library as normal and then call mu_handle_input() before and mu_draw_shapes() after draw step. Use the text_width and text_height als delegates for mu_Context.text_width/text_height.
+Initialize the library as normal and then call mu_handle_input() before and mu_draw_shapes() after draw step. Use the murl_text_width and murl_text_height als delegates for mu_Context.text_width/text_height.
 
 IMPORTANT: Work in progress. Text height is for example always 20.
 
@@ -78,8 +78,8 @@ mu_Context* ctx = (mu_Context*)malloc(sizeof(mu_Context));
 mu_init(ctx);
 
 // assign text measuring methods
-ctx->text_width = text_width;
-ctx->text_height = text_height;
+ctx->text_width = murl_text_width;
+ctx->text_height = murl_text_height;
 
 // in update loop 
 
